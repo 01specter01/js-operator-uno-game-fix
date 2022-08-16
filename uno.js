@@ -1,6 +1,5 @@
 // Uno!
 
-console.log(Math.random() - 5);
 // Vorlage für die Spieler
 const player = {
     name: "",
@@ -57,26 +56,41 @@ const stack = [
 // Mischen, mischen, mischen!
 // Ganz schön lang, diese Zeile... Geht bestimmt besser.
 const shuffledStack = stack
-    .sort(() => Math.random() - 0.5)
-    .sort(() => Math.random() - 0.5)
-    .sort(() => Math.random() - 0.5)
-    .sort(() => Math.random() - 0.5)
-    .sort(() => Math.random() - 0.5)
-    .sort(() => Math.random() - 0.5)
-    .sort(() => Math.random() - 0.5)
-    .sort(() => Math.random() - 0.5);
+    .sort(() => Math.floor(Math.random() - 0.1))
+    .sort(() => Math.floor(Math.random() - 0.1))
+    .sort(() => Math.floor(Math.random() - 0.1))
+    .sort(() => Math.floor(Math.random() - 0.1))
+    .sort(() => Math.floor(Math.random() - 0.1))
+    .sort(() => Math.floor(Math.random() - 0.1))
+    .sort(() => Math.floor(Math.random() - 0.1))
+    .sort(() => Math.floor(Math.random() - 0.1));
+
 // Spieler 1 mit der Vorlage erstellen
-const player1 = player;
+
+const player1 = {
+    name: "",
+    hand: [],
+    score: 0,
+    level: "beginner",
+};
 player1.name = "Fantasia";
+
 // Fünf Karten ziehen
-let card1 = shuffledStack.shift();
-let card2 = shuffledStack.shift();
-let card3 = shuffledStack.shift();
-let card4 = shuffledStack.shift();
 let card5 = shuffledStack.shift();
-player1.hand = [card1, card2, card3, card4, card5];
+let card2 = shuffledStack.shift();
+let card1 = shuffledStack.shift();
+let card4 = shuffledStack.shift();
+let card3 = shuffledStack.shift();
+
+player1.hand = [card4, card2, card1, card3, card5];
 // Spieler 2 mit der Vorlage erstellen
-const player2 = player;
+const player2 = {
+    name: "",
+    hand: [],
+    score: 0,
+    level: "beginner",
+};
+
 player2.name = "Andi Feind";
 // Fünf Karten ziehen
 let cardSecond1 = shuffledStack.shift();
@@ -85,11 +99,11 @@ let cardSecond3 = shuffledStack.shift();
 let cardSecond4 = shuffledStack.shift();
 let cardSecond5 = shuffledStack.shift();
 player2.hand = [
-    cardSecond1,
+    cardSecond5,
     cardSecond2,
     cardSecond3,
+    cardSecond1,
     cardSecond4,
-    cardSecond5,
 ];
 // Die erste aufgedeckte Karte.
 // Die Spieler sollen die passenden Karten auf den gameStack ablegen.
