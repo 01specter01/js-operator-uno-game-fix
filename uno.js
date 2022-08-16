@@ -117,7 +117,7 @@ if (player1.hand.card.color == gameStack.color) {
     console.log("Card is played by player1");
 }else{
     console.log("take new card");
-    return gameStack.shift() => player.push()
+    return gameStack.shift(card) => player.push(card)
 }
 
 // ...was ist denn hier passiert?!
