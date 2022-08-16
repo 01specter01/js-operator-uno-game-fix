@@ -65,14 +65,10 @@ const shuffledStack = stack
     .sort(() => Math.floor(Math.random() - 0.1))
     .sort(() => Math.floor(Math.random() - 0.1));
 
+console.log(shuffledStack, shuffledStack.length);
 // Spieler 1 mit der Vorlage erstellen
+const player1 = { ...player };
 
-const player1 = {
-    name: "",
-    hand: [],
-    score: 0,
-    level: "beginner",
-};
 player1.name = "Fantasia";
 
 // Fünf Karten ziehen
@@ -84,12 +80,7 @@ let card3 = shuffledStack.shift();
 
 player1.hand = [card4, card2, card1, card3, card5];
 // Spieler 2 mit der Vorlage erstellen
-const player2 = {
-    name: "",
-    hand: [],
-    score: 0,
-    level: "beginner",
-};
+const player2 = { ...player };
 
 player2.name = "Andi Feind";
 // Fünf Karten ziehen
@@ -111,7 +102,7 @@ const gameStack = shuffledStack.shift();
 // ...was ist denn hier passiert?!
 console.log("player1", player1);
 console.log("player2", player2);
-console.log({ gameStack, shuffledStack });
+console.log({ gameStack, shuffledStack, length: shuffledStack.length });
 // Bitte hilf mir!
 // 1. Spieler anlegen
 // Es sollen zwei unterschiedliche Spieler angelegt werden können.
