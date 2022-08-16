@@ -85,6 +85,11 @@ const player2 = { ...player };
 
 player2.name = "Andi Feind";
 // Fünf Karten ziehen
+
+const card = {
+    color: "",
+    number: "",
+};
 let cardSecond1 = shuffledStack.shift();
 let cardSecond2 = shuffledStack.shift();
 let cardSecond3 = shuffledStack.shift();
@@ -100,6 +105,21 @@ player2.hand = [
 // Die erste aufgedeckte Karte.
 // Die Spieler sollen die passenden Karten auf den gameStack ablegen.
 const gameStack = shuffledStack.shift();
+
+//Füge hinzu wenn hand same color or same number, play card and take card off carddeck!!!
+if (player1.hand.card.color == gameStack.color) {
+    console.log("Card is played by player1");
+} else if (player1.hand.card.number == gameStack.number) {
+    console.log("Card is played by player1");
+} else if (player2.hand.card.color == gameStack.color) {
+    console.log("Card is played by player1");
+} else if (player2.hand.card.number == gameStack.number) {
+    console.log("Card is played by player1");
+}else{
+    console.log("take new card");
+    return gameStack.shift() => player.push()
+}
+
 // ...was ist denn hier passiert?!
 console.log("player1", player1);
 console.log("player2", player2);
