@@ -53,17 +53,18 @@ const stack = [
     { color: "yellow", number: "8" },
     { color: "yellow", number: "9" },
 ];
+
 // Mischen, mischen, mischen!
 // Ganz schön lang, diese Zeile... Geht bestimmt besser.
 const shuffledStack = stack
-    .sort(() => Math.floor(Math.random() - 0.1))
-    .sort(() => Math.floor(Math.random() - 0.1))
-    .sort(() => Math.floor(Math.random() - 0.1))
-    .sort(() => Math.floor(Math.random() - 0.1))
-    .sort(() => Math.floor(Math.random() - 0.1))
-    .sort(() => Math.floor(Math.random() - 0.1))
-    .sort(() => Math.floor(Math.random() - 0.1))
-    .sort(() => Math.floor(Math.random() - 0.1));
+    .sort(() => Math.floor(Math.random() - 0.5))
+    .sort(() => Math.floor(Math.random() - 0.5))
+    .sort(() => Math.floor(Math.random() - 0.5))
+    .sort(() => Math.floor(Math.random() - 0.5))
+    .sort(() => Math.floor(Math.random() - 0.5))
+    .sort(() => Math.floor(Math.random() - 0.5))
+    .sort(() => Math.floor(Math.random() - 0.5))
+    .sort(() => Math.floor(Math.random() - 0.5));
 
 console.log(shuffledStack, shuffledStack.length);
 // Spieler 1 mit der Vorlage erstellen
